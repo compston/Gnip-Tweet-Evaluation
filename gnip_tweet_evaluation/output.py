@@ -124,10 +124,10 @@ def flatten_dict(d):
 
 def dump_results(results, data_loc, uid):
     #uid = results['unique_id']
-    #try:
-    #    os.stat(data_loc + uid)
-    #except:
-    #    os.makedirs(data_loc + uid)
+    try:
+        os.stat(data_loc + uid)
+    except:
+        os.makedirs(data_loc + uid)
 
     if "tweet_count" in results:
         count_output(results["tweet_count"], 
